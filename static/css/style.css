@@ -49,10 +49,11 @@ body {
   }
   
   /* Header */
-  .header-container {
+.header-container {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 50vw; /* Adjust the vw value as needed */
+    max-height: 800px; /* Set a maximum height if desired */
   }
   
   .image-container {
@@ -61,6 +62,7 @@ body {
     overflow: hidden;
     position: relative;
   }
+  
   .slideshow-image {
     position: absolute;
     top: 0;
@@ -87,43 +89,48 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     width: 80%;
     max-width: 900px;
-    height: 50%;
+    height: auto;
+    padding: 2vw; /* Adjust the vw value as needed */
   }
   
   .headshot-container {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
+    width: 20vw; /* Adjust the vw value as needed */
+    height: 20vw; /* Adjust the vw value as needed */
     overflow: hidden;
-    margin-right: 40px;
+    margin-right: 0vw; /* Adjust the vw value as needed */
+    margin-left: 0vw; /* Adjust the vw value as needed */
   }
   
   .headshot-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: right center;
   }
   
   .text-container {
-    color: #000;
-    padding: 0px;
+    color: #f7f3da;
+    padding: 0;
+    position: relative;
+    transform: translate(3vw, -2vw); /* Adjust the vw values as needed */
   }
   
   .text-container h2 {
-    font-size: 60px;
-    margin-bottom: 0px;
+    font-size: 4vw; /* Adjust the vw value as needed */
+    margin-bottom: 0;
+    text-align: left;
   }
   
   .text-container p {
-    font-size: 35px;
+    font-size: 2.5vw; /* Adjust the vw value as needed */
     margin-top: 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    text-align: left;
   }
   
   /* Main Content */
