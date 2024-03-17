@@ -1,0 +1,297 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Prompt", sans-serif;
+    background-color: #f4ffff;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #fbf7f3;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 30px;
+  }
+  
+  nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 36px;
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 1px;
+    left: 0;
+    background-color: #000000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  /* Header */
+  .header-container {
+    position: relative;
+    width: 100%;
+    height: 800px;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  
+  .overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    height: 50%;
+  }
+  
+  .headshot-container {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+  }
+  
+  .headshot-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-container {
+    color: #000;
+    padding: 0px;
+  }
+  
+  .text-container h2 {
+    font-size: 60px;
+    margin-bottom: 0px;
+  }
+  
+  .text-container p {
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+  
+  /* Main Content */
+  .container {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4ffff;
+  }
+  
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #a91d1d;
+    font-size: 72px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .text-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .text-wrapper p {
+    color: #666;
+    font-size: 40px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Font Library */
+  .prompt-thin {
+    font-family: "Prompt", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .prompt-extralight {
+    font-family: "Prompt", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .prompt-light {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .prompt-regular {
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .prompt-medium {
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .prompt-semibold {
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .prompt-bold {
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .prompt-extrabold {
+    font-family: "Prompt", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .prompt-black {
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .prompt-thin-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .prompt-extralight-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .prompt-light-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .prompt-regular-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .prompt-medium-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .prompt-semibold-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .prompt-bold-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .prompt-extrabold-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .prompt-black-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  .goudy-bookletter-1911-regular {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .im-fell-regular {
+    font-family: 'IM Fell Great Primer', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .im-fell-italic {
+    font-family: 'IM Fell Great Primer', serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .forum-regular {
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
