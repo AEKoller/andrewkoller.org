@@ -14,19 +14,19 @@ body {
   nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    padding: 1vw; /* Adjust the vw value as needed */
     display: flex;
     justify-content: center;
   }
   
   nav ul li {
-    margin: 0 30px;
+    margin: 0 2vw; /* Adjust the vw value as needed */
   }
   
   nav ul li a {
     color: #000000;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 2.5vw; /* Adjust the vw value as needed */
     position: relative;
   }
   
@@ -34,8 +34,8 @@ body {
     content: '';
     position: absolute;
     width: 100%;
-    height: 1px;
-    bottom: 1px;
+    height: 0.1vw; /* Adjust the vw value as needed */
+    bottom: 0.1vw; /* Adjust the vw value as needed */
     left: 0;
     background-color: #000000;
     visibility: hidden;
@@ -93,7 +93,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 50vw; /* Adjust the vw value as needed */
     max-width: 1000px;
     height: auto;
     padding: 2vw; /* Adjust the vw value as needed */
@@ -103,8 +103,7 @@ body {
     width: 20vw; /* Adjust the vw value as needed */
     height: 20vw; /* Adjust the vw value as needed */
     overflow: hidden;
-    margin-right: 0vw; /* Adjust the vw value as needed */
-    margin-left: 0vw; /* Adjust the vw value as needed */
+    margin-right: 2vw; /* Adjust the vw value as needed */
   }
   
   .headshot-container img {
@@ -117,20 +116,18 @@ body {
   .text-container {
     color: #fbf7f3;
     padding: 0;
-    position: relative;
-    transform: translate(3vw, -2vw); /* Adjust the vw values as needed */
   }
   
   .text-container h2 {
     font-size: 4vw; /* Adjust the vw value as needed */
-    margin-bottom: 0;
+    margin-bottom: 1vw; /* Adjust the vw value as needed */
     text-align: left;
   }
   
   .text-container p {
-    font-size: 2.10vw; /* Adjust the vw value as needed */
+    font-size: 2vw; /* Adjust the vw value as needed */
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0.5vw; /* Adjust the vw value as needed */
     text-align: left;
   }
   
@@ -144,15 +141,15 @@ body {
   .content {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 4vw 2vw; /* Adjust the vw values as needed */
     text-align: center;
   }
   
   h1 {
     color: #a91d1d;
-    font-size: 72px;
+    font-size: 6vw; /* Adjust the vw value as needed */
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 2vw; /* Adjust the vw value as needed */
     text-align: left;
   }
   
@@ -163,10 +160,10 @@ body {
   
   .text-wrapper p {
     color: #666;
-    font-size: 40px;
+    font-size: 3vw; /* Adjust the vw value as needed */
     line-height: 1.5;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 2vw; /* Adjust the vw value as needed */
     text-align: left;
   }
   
