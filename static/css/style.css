@@ -37,7 +37,7 @@ body {
     height: 0.1vw; /* Adjust the vw value as needed */
     bottom: 0.1vw; /* Adjust the vw value as needed */
     left: 0;
-    background-color: #000000;
+    background-color: #a91d1d;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out;
@@ -114,7 +114,7 @@ body {
   }
   
   .text-container {
-    color: #fbf7f3;
+    color: #fbf8f4;
     padding: 0;
   }
   
@@ -122,6 +122,7 @@ body {
     font-size: 4vw; /* Adjust the vw value as needed */
     margin-bottom: 1vw; /* Adjust the vw value as needed */
     text-align: left;
+    color: #fbf8f4;
   }
   
   .text-container p {
@@ -129,6 +130,24 @@ body {
     margin-top: 0;
     margin-bottom: 0.5vw; /* Adjust the vw value as needed */
     text-align: left;
+  }
+
+  /* nietzsche_box */
+  .square-image-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 0vw;
+    margin-top: 1vh;
+  }
+  
+  .square-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
   }
   
   /* Main Content */
@@ -147,10 +166,10 @@ body {
   
   h1 {
     color: #a91d1d;
-    font-size: 6vw; /* Adjust the vw value as needed */
+    font-size: 5vw; /* Adjust the vw value as needed */
     margin-top: 0;
     margin-bottom: 2vw; /* Adjust the vw value as needed */
-    text-align: left;
+    text-align: Left;
   }
   
   .text-wrapper {
@@ -163,8 +182,8 @@ body {
     font-size: 3vw; /* Adjust the vw value as needed */
     line-height: 1.5;
     margin-top: 0;
-    margin-bottom: 2vw; /* Adjust the vw value as needed */
-    text-align: left;
+    margin-bottom: 1vw; /* Adjust the vw value as needed */
+    text-align: justify ;
   }
   
   /* Font Library */
