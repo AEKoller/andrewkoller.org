@@ -31,9 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
     img.src = url;
     img.alt = '';
     img.classList.add('slideshow-image', 'hidden');
-    imageContainer.appendChild(img);
+    if (imageContainer) {
+      imageContainer.appendChild(img);
+    }
   });
-
   const slideShowImages = document.querySelectorAll('.slideshow-image');
 
   function checkImagesLoaded() {
