@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Apply the measured dimensions to the typing container
   typingContainer.style.width = `${width + 200}px`; // Adding a 10px buffer, adjust as needed
-  typingContainer.style.height = `${height}px`;
+  typingContainer.style.height = `${height - 100}px`;
   // Hide or remove the text-measure element to prevent it from taking up space
   textMeasure.style.position = 'absolute';
   textMeasure.style.visibility = 'hidden';
@@ -125,13 +125,13 @@ document.addEventListener('DOMContentLoaded', function() {
   // Assumed existing setup for slideshow and overlay fade-in
 
   const typingTextElement = document.querySelector('.typing-text');
-  const textContent = "Research"; // Full text to type out
+  const textContent = "research"; // Full text to type out
   let currentIndex = 0;
 
   // Clear the element before starting
   typingTextElement.innerHTML = '';
 
-  function getRandomDelay(minDelay = 100, maxDelay = 500) {
+  function getRandomDelay(minDelay = 100, maxDelay = 350) {
     // Generates a random delay between minDelay and maxDelay
     return Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
   }

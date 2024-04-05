@@ -298,14 +298,14 @@ body {
 
   .text-container-research {
     position: relative;
-    color: #fbf8f4;
+    color: #faf3ea;
     padding: 0;
   }
 
   .typing-container {
-    display: flex;
-    align-items: flex-end;
+    display: inline-block;
     position: relative;
+    font-family: 'nanum-gothic';
   }
   
   .typing-text {
@@ -313,45 +313,26 @@ body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0;
-    font-family: 'nanum-gothic', serif;
-    line-height: normal;
+    font-family: 'nanum-gothic', monospace;
+    line-height: 1;
   }
   
   .typing-text.heading {
     font-size: 10vw;
-    /* margin-bottom: 0.5vw; */
     text-align: left;
-    line-height: 1;
     margin: 0;
     padding: 0;
+    line-height: 1;
   }
   
-  .typing-text.paragraph {
-    font-size: 2vw;
-    margin-top: 0;
-    margin-bottom: 0.5vw;
-    text-align: left;
-  }
-  
-  .cursor {
-  display: inline-flex; /* Use inline-flex for better alignment control */
-  width: 6vw; /* Adjust width to fit your design */
-  height: .75vw; /* Adjust height to match the text size more closely */
-  background-color: #a91d1d;
-  animation: blink 0.7s infinite;
-  margin-left: 0.5em;
-  margin-top: -.1em; /* Adjust this as needed */
-  align-self: top;
-  
-}
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+  .typing-text.heading::after {
+    content: "_";
+    display: inline-block;
+    vertical-align: bottom;
+    animation: blink 0.7s infinite;
+    color: #a91d1d;
+    font-size: 1em;
+    line-height: 1.11em;
   }
   
   @keyframes blink {
@@ -364,13 +345,12 @@ body {
     }
   }
 
-  .text-measure {
-    opacity: 0; /* Makes the text fully transparent */
-    white-space: nowrap; /* Ensures the text is in one line if you're measuring width */
-    font-family: 'nanum-gothic', serif; /* Match the font styles of the typing text */
-    font-size: 10vw; /* Match the font size of the typing text */
-    /* Add any other styles to match .typing-text exactly */
-  }
+  /* .text-measure {
+    opacity: 0; 
+    white-space: nowrap; 
+    font-family: 'nanum-gothic', serif; 
+    font-size: 5vw; 
+  } */
 
   /* Font Library /////////////////////////////////////////////////////////////////////////*/
   
@@ -397,6 +377,12 @@ body {
     font-style: normal;
   }
   
+  /* .nanum-gothic coding-regular {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+    font-style: normal;
+  } */
+
   .nanum-gothic coding-regular {
     font-family: "Nanum Gothic Coding", monospace;
     font-weight: 400;
