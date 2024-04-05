@@ -204,6 +204,8 @@ body {
     margin: 0 auto;
     padding: 4vw 2vw; /* Adjust the vw values as needed */
     text-align: center;
+    margin-right: 10vw;
+    margin-left: 10vw;
   }
   
   h1 {
@@ -280,8 +282,8 @@ body {
   .apa-citation p {
     margin: 0;
     text-indent: -4vw; /* Adjust the vw value as needed */
-    margin-left: 5vw; /* Adjust the vw value as needed */
-    margin-right: 5vw;
+    margin-left: 4vw;
+    margin-bottom: 5vh;
     font-size: 3vw; /* Adjust the vw value as needed */
     line-height: 1.5;
   }

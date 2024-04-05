@@ -43,24 +43,34 @@ window.onload = function() {
   
   document.addEventListener('DOMContentLoaded', function() {
     const typingTextElement = document.querySelector('.typing-text');
-    const textContent = "research"; // Full text to type out
+    const textContent = ['research', 'Research', 'RESEARCH'];
     let currentIndex = 0;
+    let currentWordIndex = 0;
   
     if (typingTextElement) {
-      // Clear the element before starting
-      typingTextElement.innerHTML = '';
-  
-      function getRandomDelay(minDelay = 50, maxDelay = 250) {
+      function getRandomDelay(minDelay = 100, maxDelay = 300) {
         // Generates a random delay between minDelay and maxDelay
         return Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
       }
   
       function typeNextChar() {
-        if (currentIndex < textContent.length) {
-          typingTextElement.innerHTML += textContent.charAt(currentIndex);
+        if (currentIndex < textContent[currentWordIndex].length) {
+          typingTextElement.innerHTML += textContent[currentWordIndex].charAt(currentIndex);
           currentIndex++;
-          // Use getRandomDelay to determine how long to wait before typing the next character
           setTimeout(typeNextChar, getRandomDelay());
+        } else {
+          setTimeout(deleteWord, 4000); // Delay before starting deletion
+        }
+      }
+  
+      function deleteWord() {
+        if (currentIndex > 0) {
+          typingTextElement.innerHTML = textContent[currentWordIndex].slice(0, currentIndex - 1);
+          currentIndex--;
+          setTimeout(deleteWord, getRandomDelay(30, 100)); // Faster deletion speed
+        } else {
+          currentWordIndex = (currentWordIndex + 1) % textContent.length;
+          setTimeout(typeNextChar, 500); // Delay before typing the next word
         }
       }
   
