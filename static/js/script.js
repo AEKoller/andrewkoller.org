@@ -1,47 +1,3 @@
-// slideshow script
-// document.addEventListener('DOMContentLoaded', function() {
-//   const images = document.querySelectorAll('.slideshow-image');
-//   const loadingOverlay = document.querySelector('.loading-overlay');
-//   const overlayContainer = document.querySelector('.overlay-container');
-//   let currentImageIndex = 0;
-//   let imagesLoaded = 0;
-
-//   function showNextImage() {
-//     images[currentImageIndex].style.opacity = 0;
-//     currentImageIndex = (currentImageIndex + 1) % images.length;
-//     images[currentImageIndex].style.opacity = 1;
-//   }
-
-//   function startSlideshow() {
-//     setInterval(showNextImage, 5000); // Change image every 5 seconds
-//   }
-
-//   function checkImagesLoaded() {
-//     imagesLoaded++;
-//     if (imagesLoaded === images.length) {
-//       // All images are loaded
-//       loadingOverlay.style.display = 'none';
-//       setTimeout(function() {
-//         overlayContainer.classList.add('visible');
-//       }, 1300);
-//       setTimeout(startSlideshow, 2000); // Delay the start of the slideshow by 2 seconds
-//     }
-//   }
-
-//   images.forEach((image, index) => {
-//     if (index !== 0) {
-//       image.style.opacity = 0;
-//     }
-
-//     const img = new Image();
-//     img.onload = function() {
-//       image.src = this.src;
-//       checkImagesLoaded();
-//     };
-//     img.src = image.getAttribute('src');
-//   });
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
   const imageContainer = document.querySelector('.image-container');
   const loadingOverlay = document.querySelector('.loading-overlay');
@@ -50,23 +6,23 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentImageIndex = 0;
 
   const imageUrls = [
-    'static/images/webp/IMG_2832.webp',
-    'static/images/webp/IMG_2845.webp',
-    'static/images/webp/IMG_3037.webp',
-    'static/images/webp/IMG_3094.webp',
-    'static/images/webp/IMG_3212-Enhanced-NR.webp',
-    'static/images/webp/IMG_3309.webp',
-    'static/images/webp/IMG_3331.webp',
-    'static/images/webp/IMG_3363.webp',
-    'static/images/webp/IMG_3541-Enhanced-NR.webp',
-    'static/images/webp/IMG_3659.webp',
-    'static/images/webp/IMG_3733.webp',
-    'static/images/webp/IMG_3734.webp',
-    'static/images/webp/IMG_3759.webp',
-    'static/images/webp/IMG_3768.webp',
-    'static/images/webp/IMG_3782.webp',
-    'static/images/webp/IMG_3833.webp',
-    'static/images/webp/IMG_4674-Enhanced-NR.webp'
+    'static/images/index/IMG_2832.webp',
+    'static/images/index/IMG_2845.webp',
+    'static/images/index/IMG_3037.webp',
+    'static/images/index/IMG_3094.webp',
+    'static/images/index/IMG_3212.webp',
+    'static/images/index/IMG_3309.webp',
+    'static/images/index/IMG_3331.webp',
+    'static/images/index/IMG_3363.webp',
+    'static/images/index/IMG_3541.webp',
+    'static/images/index/IMG_3659.webp',
+    'static/images/index/IMG_3733.webp',
+    'static/images/index/IMG_3734.webp',
+    'static/images/index/IMG_3759.webp',
+    'static/images/index/IMG_3768.webp',
+    'static/images/index/IMG_3782.webp',
+    'static/images/index/IMG_3833.webp',
+    'static/images/index/IMG_4674.webp'
   ];
 
   // Create <img> elements dynamically
