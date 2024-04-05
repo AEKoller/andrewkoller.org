@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     'static/images/index/IMG_4674.webp'
   ];
 
-  // Create <img> elements dynamically
-  imageUrls.forEach(url => {
+   // Create <img> elements dynamically
+   imageUrls.forEach(url => {
     const img = document.createElement('img');
     img.src = url;
     img.alt = '';
@@ -50,14 +50,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       startSlideshow();
+      fadeInOverlayContainer();
     }
   }
-  
+
   function handleImageError() {
     console.error('Failed to load image:', this.src);
     checkImagesLoaded();
   }
-  
+
   slideShowImages.forEach(img => {
     if (img.complete) {
       checkImagesLoaded();
@@ -66,26 +67,40 @@ document.addEventListener('DOMContentLoaded', function() {
       img.addEventListener('error', handleImageError);
     }
   });
+
   function showNextImage() {
     slideShowImages[currentImageIndex].classList.remove('loaded');
     currentImageIndex = (currentImageIndex + 1) % slideShowImages.length;
     slideShowImages[currentImageIndex].classList.add('loaded');
-    setTimeout(() => {
-      console.log('Image', currentImageIndex, 'opacity:', window.getComputedStyle(slideShowImages[currentImageIndex]).opacity);
-    }, 100);
   }
-  
 
   function startSlideshow() {
     setInterval(showNextImage, 5000); // Change image every 5 seconds
+  }
+
+  function fadeInOverlayContainer() {
+    overlayContainer.classList.add('visible');
   }
 });
 
 // Overlay fade-in script
 document.addEventListener('DOMContentLoaded', function() {
   var overlayContainer = document.querySelector('.overlay-container');
+  fadeInOverlayContainer();
   overlayContainer.classList.add('visible');
 });
+
+function fadeInOverlayContainer() {
+  var overlayContainer = document.querySelector('.overlay-container');
+  if (overlayContainer) {
+    overlayContainer.classList.add('visible');
+  }
+}
+
+function onPageNavigated() {
+  fadeInOverlayContainer();
+  // Any other logic you need to run when the page is navigated to
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   const textMeasure = document.querySelector('.text-measure');
@@ -96,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const height = textMeasure.offsetHeight;
 
   // Apply the measured dimensions to the typing container
-  typingContainer.style.width = `${width + 160}px`; // Adding a 10px buffer, adjust as needed
+  typingContainer.style.width = `${width + 200}px`; // Adding a 10px buffer, adjust as needed
   typingContainer.style.height = `${height}px`;
   // Hide or remove the text-measure element to prevent it from taking up space
   textMeasure.style.position = 'absolute';
