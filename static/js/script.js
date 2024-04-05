@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Measure the text
   // const width = textMeasure.offsetWidth;
-  const height = textMeasure.offsetHeight;
+  // const height = textMeasure.offsetHeight;
 
   // Apply the measured dimensions to the typing container
   typingContainer.style.width = `${width + 200}px`; // Adding a 10px buffer, adjust as needed
