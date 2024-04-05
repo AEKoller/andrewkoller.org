@@ -1,3 +1,7 @@
+window.onload = function() {
+  fadeInOverlayContainer();
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   const imageContainer = document.querySelector('.image-container');
   const loadingOverlay = document.querySelector('.loading-overlay');
@@ -130,24 +134,49 @@ document.addEventListener('DOMContentLoaded', function() {
   const textContent = "research"; // Full text to type out
   let currentIndex = 0;
 
-  // Clear the element before starting
-  typingTextElement.innerHTML = '';
+  if (typingTextElement) {
+    // Clear the element before starting
+    typingTextElement.innerHTML = '';
 
-  function getRandomDelay(minDelay = 100, maxDelay = 350) {
-    // Generates a random delay between minDelay and maxDelay
-    return Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
-  }
-
-  function typeNextChar() {
-    if (currentIndex < textContent.length) {
-      typingTextElement.innerHTML += textContent.charAt(currentIndex);
-      currentIndex++;
-      // Use getRandomDelay to determine how long to wait before typing the next character
-      setTimeout(typeNextChar, getRandomDelay());
+    function getRandomDelay(minDelay = 50, maxDelay = 250) {
+      // Generates a random delay between minDelay and maxDelay
+      return Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
     }
+
+    function typeNextChar() {
+      if (currentIndex < textContent.length) {
+        typingTextElement.innerHTML += textContent.charAt(currentIndex);
+        currentIndex++;
+        // Use getRandomDelay to determine how long to wait before typing the next character
+        setTimeout(typeNextChar, getRandomDelay());
+      }
+    }
+
+    // Start typing after a delay to allow overlay to fade in
+    const typingStartDelay = 1000; // Delay in milliseconds to start typing
+    setTimeout(typeNextChar, typingStartDelay);
   }
 
-  // Start typing after a delay to allow overlay to fade in
-  const typingStartDelay = 1000; // Delay in milliseconds to start typing
-  setTimeout(typeNextChar, typingStartDelay);
+  const researchLink = document.querySelector('nav a[href="research.html"]');
+if (researchLink) {
+  researchLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    fadeInOverlayContainer();
+    setTimeout(function() {
+      window.location.href = 'research.html'; // Navigate to the research page after a delay
+    }, 400); // Adjust the delay (in milliseconds) as needed
+  });
+}
+
+const indexLink = document.querySelector('nav a[href="index.html"]');
+if (indexLink) {
+  indexLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    fadeInOverlayContainer();
+    // Additional code to navigate to the index page, if needed
+    setTimeout(function() {
+      window.location.href = 'index.html'; // Navigate to the research page after a delay
+    }, 400); // Adjust the delay (in milliseconds) as needed
+  });
+}
 });
