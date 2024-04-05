@@ -85,7 +85,7 @@ body {
     position: relative;
     width: 100%;
     height: 50vw; /* Adjust the vw value as needed */
-    max-height: 800px; /* Set a maximum height if desired */
+    /* max-height: 800px; Set a maximum height if desired */
   }
   
   .image-container {
@@ -127,7 +127,6 @@ body {
     display: flex;
     align-items: center;
     width: 50vw; /* Adjust the vw value as needed */
-    max-width: 1000px;
     height: auto;
     padding: 2vw; /* Adjust the vw value as needed */
   }
@@ -189,13 +188,13 @@ body {
 
   /* Main Page Content //////////////////////////////////////////////////////////////////////////////*/
   .container {
-    width: 100%;
+    width: 80vw;
     padding: 0;
+    margin: 0 auto;
     box-sizing: border-box;
   }
   
   .content {
-    max-width: 1000px;
     margin: 0 auto;
     padding: 4vw 2vw; /* Adjust the vw values as needed */
     text-align: center;
@@ -210,7 +209,6 @@ body {
   }
   
   .text-wrapper {
-    max-width: 1000px;
     margin: 0 auto;
   }
   
@@ -254,8 +252,7 @@ body {
   /* Research Page ///////////////////////////////////////////////////////////////////////////// */
   .research-image-container {
     width: 100%;
-    height: 50vw; /* Adjust the vw value as needed */
-    max-height: 800px; /* Set a maximum height if desired */
+    height: 45vw; /* Adjust the vw value as needed */
     overflow: hidden;
     position: relative;
   }
@@ -276,8 +273,9 @@ body {
   
   .apa-citation p {
     margin: 0;
-    text-indent: -2.5vw; /* Adjust the vw value as needed */
-    margin-left: 3vw; /* Adjust the vw value as needed */
+    text-indent: -4vw; /* Adjust the vw value as needed */
+    margin-left: 5vw; /* Adjust the vw value as needed */
+    margin-right: 5vw;
     font-size: 3vw; /* Adjust the vw value as needed */
     line-height: 1.5;
   }
