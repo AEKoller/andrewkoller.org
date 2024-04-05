@@ -107,9 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const textMeasure = document.querySelector('.text-measure');
   const typingContainer = document.querySelector('.typing-container');
 
+  if (textMeasure && typingContainer) {
   // Measure the text
-  // const width = textMeasure.offsetWidth;
-  // const height = textMeasure.offsetHeight;
+  const width = textMeasure.offsetWidth;
+  const height = textMeasure.offsetHeight;
 
   // Apply the measured dimensions to the typing container
   typingContainer.style.width = `${width + 200}px`; // Adding a 10px buffer, adjust as needed
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
   textMeasure.style.position = 'absolute';
   textMeasure.style.visibility = 'hidden';
   textMeasure.style.height = '0'; // Collapse its space
-
+  }
   // Proceed with the typing effect...
 });
 
