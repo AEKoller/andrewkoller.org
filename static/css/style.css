@@ -129,6 +129,12 @@ body {
     width: 50vw; /* Adjust the vw value as needed */
     height: auto;
     padding: 2vw; /* Adjust the vw value as needed */
+    opacity: 0;
+  transition: opacity 1s ease-in-out;
+  }
+
+  .overlay-container.visible {
+    opacity: 1;
   }
   
   .headshot-container {
@@ -289,6 +295,83 @@ body {
     border-bottom: 2px solid #a91d1d; /* Add a bottom border */
     padding-bottom: 0.5vw; /* Adjust the vw value as needed */
   }
+
+  .text-container-research {
+    position: relative;
+    color: #fbf8f4;
+    padding: 0;
+  }
+
+  .typing-container {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+  
+  .typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    font-family: 'nanum-gothic', serif;
+    line-height: normal;
+  }
+  
+  .typing-text.heading {
+    font-size: 10vw;
+    /* margin-bottom: 0.5vw; */
+    text-align: left;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .typing-text.paragraph {
+    font-size: 2vw;
+    margin-top: 0;
+    margin-bottom: 0.5vw;
+    text-align: left;
+  }
+  
+  .cursor {
+  display: inline-flex; /* Use inline-flex for better alignment control */
+  width: 6vw; /* Adjust width to fit your design */
+  height: .75vw; /* Adjust height to match the text size more closely */
+  background-color: #a91d1d;
+  animation: blink 0.7s infinite;
+  margin-left: 0.5em;
+  margin-top: -.1em; /* Adjust this as needed */
+  align-self: top;
+  
+}
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .text-measure {
+    opacity: 0; /* Makes the text fully transparent */
+    white-space: nowrap; /* Ensures the text is in one line if you're measuring width */
+    font-family: 'nanum-gothic', serif; /* Match the font styles of the typing text */
+    font-size: 10vw; /* Match the font size of the typing text */
+    /* Add any other styles to match .typing-text exactly */
+  }
+
   /* Font Library /////////////////////////////////////////////////////////////////////////*/
   
   .goudy-bookletter-1911-regular {
@@ -314,4 +397,9 @@ body {
     font-style: normal;
   }
   
+  .nanum-gothic coding-regular {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
  

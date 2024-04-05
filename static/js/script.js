@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (imagesLoaded === slideShowImages.length) {
       // All images are loaded
       loadingOverlay.style.display = 'none';
-      overlayContainer.classList.add('visible');
       slideShowImages.forEach((img, index) => {
         img.classList.remove('hidden');
         if (index !== 0) {
@@ -83,7 +82,55 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Overlay fade-in script
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
   var overlayContainer = document.querySelector('.overlay-container');
   overlayContainer.classList.add('visible');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const textMeasure = document.querySelector('.text-measure');
+  const typingContainer = document.querySelector('.typing-container');
+
+  // Measure the text
+  const width = textMeasure.offsetWidth;
+  const height = textMeasure.offsetHeight;
+
+  // Apply the measured dimensions to the typing container
+  typingContainer.style.width = `${width + 160}px`; // Adding a 10px buffer, adjust as needed
+  typingContainer.style.height = `${height}px`;
+  // Hide or remove the text-measure element to prevent it from taking up space
+  textMeasure.style.position = 'absolute';
+  textMeasure.style.visibility = 'hidden';
+  textMeasure.style.height = '0'; // Collapse its space
+
+  // Proceed with the typing effect...
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Assumed existing setup for slideshow and overlay fade-in
+
+  const typingTextElement = document.querySelector('.typing-text');
+  const textContent = "Research"; // Full text to type out
+  let currentIndex = 0;
+
+  // Clear the element before starting
+  typingTextElement.innerHTML = '';
+
+  function getRandomDelay(minDelay = 100, maxDelay = 500) {
+    // Generates a random delay between minDelay and maxDelay
+    return Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
+  }
+
+  function typeNextChar() {
+    if (currentIndex < textContent.length) {
+      typingTextElement.innerHTML += textContent.charAt(currentIndex);
+      currentIndex++;
+      // Use getRandomDelay to determine how long to wait before typing the next character
+      setTimeout(typeNextChar, getRandomDelay());
+    }
+  }
+
+  // Start typing after a delay to allow overlay to fade in
+  const typingStartDelay = 1000; // Delay in milliseconds to start typing
+  setTimeout(typeNextChar, typingStartDelay);
 });
