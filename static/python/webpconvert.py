@@ -1,3 +1,4 @@
+#This script uses the library PIL which you can install using "pip install pillow"
 import os
 from PIL import Image
 
