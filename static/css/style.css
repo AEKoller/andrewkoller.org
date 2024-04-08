@@ -239,8 +239,8 @@ body {
 
   /* nietzsche_box */
   .square-image-container {
-    width: 300px;
-    height: 300px;
+    width: 20vw;
+    height: 20vh;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
