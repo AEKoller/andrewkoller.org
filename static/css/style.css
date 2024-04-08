@@ -211,7 +211,7 @@ body {
   h1 {
     color: #a91d1d;
     font-size: 5vw; /* Adjust the vw value as needed */
-    margin-top: 0;
+    margin-top: 2vh;
     margin-bottom: 2vw; /* Adjust the vw value as needed */
     text-align: Left;
   }
