@@ -511,7 +511,7 @@ h1 {
 
 @media (min-width: 1440px) {
   .typing-text.heading {
-    font-size: 9vw; /* or any fixed size that looks good */
+    font-size: 8vw; /* or any fixed size that looks good */
     line-height: 1.1; /* adjust line height for better spacing */
   }
 }
