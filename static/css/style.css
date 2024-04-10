@@ -1,393 +1,444 @@
-
 /* General Elements */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Prompt", sans-serif;
-    background-color: #fbf8f4;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif;
+  background-color: #fbf8f4;
+}
 
-  .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-  }
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
-  .loading-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff; /* Adjust the background color as needed */
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: #333; /* Adjust the text color as needed */
-  }
-  
-  /* Navigation Bar /////////////////////////////////////////////////////////////////////////////////////////////////*/
-  nav {
-    background-color: #ffffff;
-    position: fixed;
+.fade-in.visible {
+  opacity: 1;
+}
+
+.loading-overlay {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  background-color: #fff; /* Adjust the background color as needed */
   z-index: 999;
-  border-bottom: 1px solid #ccc;
-  }
-  
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 1vw; /* Adjust the vw value as needed */
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 2vw; /* Adjust the vw value as needed */
-  }
-  
-  nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 2.5vw; /* Adjust the vw value as needed */
-    position: relative;
-  }
-  
-  nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0.1vw; /* Adjust the vw value as needed */
-    bottom: 0.1vw; /* Adjust the vw value as needed */
-    left: 0;
-    background-color: #a91d1d;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  nav ul li a:hover::after {
-    visibility: visible;
-    transform: scaleX(1);
-  }
-  
-  /* Main Page Header //////////////////////////////////////////////////////////////////////////////////////////*/
-.header-container {
-    position: relative;
-    width: 100%;
-    height: 50vw; /* Adjust the vw value as needed */
-    /* max-height: 800px; Set a maximum height if desired */
-  }
-  
-  .image-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slideshow-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
-  }
-  
-  /* Main Page Overlay */
-  .overlay-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    width: 50vw; /* Adjust the vw value as needed */
-    height: auto;
-    padding: 2vw; /* Adjust the vw value as needed */
-    opacity: 0;
-  transition: opacity 1s ease-in-out;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #333; /* Adjust the text color as needed */
+}
 
-  .overlay-container.visible {
+/* Navigation Bar /////////////////////////////////////////////////////////////////////////////////////////////////*/
+nav {
+  background-color: #ffffff;
+  position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 999;
+border-bottom: 1px solid #ccc;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1vw; /* Adjust the vw value as needed */
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 2vw; /* Adjust the vw value as needed */
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 2.5vw; /* Adjust the vw value as needed */
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.1vw; /* Adjust the vw value as needed */
+  bottom: 0.1vw; /* Adjust the vw value as needed */
+  left: 0;
+  background-color: #a91d1d;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Main Page Header //////////////////////////////////////////////////////////////////////////////////////////*/
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 50vw; /* Adjust the vw value as needed */
+  /* max-height: 800px; Set a maximum height if desired */
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/* Main Page Overlay */
+.overlay-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  width: 50vw; /* Adjust the vw value as needed */
+  height: auto;
+  padding: 2vw; /* Adjust the vw value as needed */
+  opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+
+.overlay-container.visible {
+  opacity: 1;
+}
+
+.headshot-container {
+  width: 20vw; /* Adjust the vw value as needed */
+  height: 20vw; /* Adjust the vw value as needed */
+  overflow: hidden;
+  margin-right: 2vw; /* Adjust the vw value as needed */
+}
+
+.headshot-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.text-container {
+  color: #fbf8f4;
+  padding: 0;
+}
+
+.text-container h2 {
+  font-size: 4vw; /* Adjust the vw value as needed */
+  margin-bottom: 1vw; /* Adjust the vw value as needed */
+  text-align: left;
+  color: #fbf8f4;
+}
+
+.text-container p {
+  font-size: 2vw; /* Adjust the vw value as needed */
+  margin-top: 0;
+  margin-bottom: 0.5vw; /* Adjust the vw value as needed */
+  text-align: left;
+}
+
+ /* Slide show Image handler */
+ .slideshow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slideshow-image.loaded {
+  opacity: 1 !important;
+}
+
+
+.slideshow-image.hidden {
+  display: none;
+}
+
+
+/* Main Page Content //////////////////////////////////////////////////////////////////////////////*/
+.container {
+  width: 80vw;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 4vw 2vw; /* Adjust the vw values as needed */
+  text-align: center;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+h1 {
+  color: #a91d1d;
+  font-size: 5vw; /* Adjust the vw value as needed */
+  margin-top: 2vh;
+  margin-bottom: 2vw; /* Adjust the vw value as needed */
+  text-align: Left;
+}
+
+.text-wrapper {
+  margin: 0 auto;
+}
+
+.text-wrapper p {
+  color: #666;
+  font-size: 3vw; /* Adjust the vw value as needed */
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 1vw; /* Adjust the vw value as needed */
+  text-align: justify ;
+}
+
+/* .text-wrapper p::first-letter {
+  color: #a91d1d;
+  font-size: 8vw; 
+  float: left;
+  margin-right: 1vw; 
+  line-height: 1;
+} */
+
+/* nietzsche_box */
+.square-image-container {
+  width: 20vw;
+  height: 20vh;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 0vw;
+  margin-top: 1vh;
+}
+
+.square-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* About Me Page /////////////////////////////////////////////////////////////////////////////*/
+
+/* Research Page ///////////////////////////////////////////////////////////////////////////// */
+.research-image-container {
+  width: 100%;
+  height: 45vw; /* Adjust the vw value as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.research-image-container img {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* APA Citation Styling */
+.apa-citation {
+  text-align: left;
+  margin-bottom: 2vw; /* Adjust the vw value as needed */
+}
+
+.apa-citation p {
+  margin: 0;
+  text-indent: -4vw; /* Adjust the vw value as needed */
+  margin-left: 4vw;
+  margin-bottom: 2vh;
+  font-size: 2vw; /* Adjust the vw value as needed */
+  line-height: 1.5;
+}
+
+.research-content h2 {
+  font-size: 3vw; /* Adjust the vw value as needed */
+  color: #a91d1d;
+  margin-top: 4vw; /* Adjust the vw value as needed */
+  margin-bottom: 2vw; /* Adjust the vw value as needed */
+  text-align: left;
+  border-bottom: 2px solid #a91d1d; /* Add a bottom border */
+  padding-bottom: 0.5vw; /* Adjust the vw value as needed */
+}
+
+.text-container-research {
+  position: relative;
+  color: #faf3ea;
+  padding: 0;
+}
+
+.typing-container {
+  display: inline-block;
+  position: relative;
+  font-family: 'nanum-gothic';
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  font-family: 'nanum-gothic', monospace;
+  line-height: 1;
+}
+
+.typing-text.heading {
+  font-size: 10vw;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.typing-text.heading::after {
+  content: "_";
+  display: inline-block;
+  vertical-align: bottom;
+  animation: blink 0.7s infinite;
+  color: #a91d1d;
+  font-size: 1em;
+  line-height: 1.11em;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
     opacity: 1;
   }
-  
-  .headshot-container {
-    width: 20vw; /* Adjust the vw value as needed */
-    height: 20vw; /* Adjust the vw value as needed */
-    overflow: hidden;
-    margin-right: 2vw; /* Adjust the vw value as needed */
-  }
-  
-  .headshot-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right center;
-  }
-  
-  .text-container {
-    color: #fbf8f4;
-    padding: 0;
-  }
-  
-  .text-container h2 {
-    font-size: 4vw; /* Adjust the vw value as needed */
-    margin-bottom: 1vw; /* Adjust the vw value as needed */
-    text-align: left;
-    color: #fbf8f4;
-  }
-  
-  .text-container p {
-    font-size: 2vw; /* Adjust the vw value as needed */
-    margin-top: 0;
-    margin-bottom: 0.5vw; /* Adjust the vw value as needed */
-    text-align: left;
+}
+
+.text-measure {
+  opacity: 0; 
+  white-space: nowrap; 
+  font-family: 'nanum-gothic', serif; 
+  font-size: 5vw; 
+}
+
+/* Font Library /////////////////////////////////////////////////////////////////////////*/
+
+.goudy-bookletter-1911-regular {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.im-fell-regular {
+  font-family: 'IM Fell Great Primer', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.im-fell-italic {
+  font-family: 'IM Fell Great Primer', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.forum-regular {
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .nanum-gothic coding-regular {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+.nanum-gothic coding-regular {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Media Breakpoints */
+
+/* Styles for screens smaller than 576px */
+@media (max-width: 575.98px) {
+  /* Adjust styles for extra small screens */
+}
+
+/* Styles for screens between 576px and 767.98px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Adjust styles for small screens */
+}
+
+/* Styles for screens between 768px and 991.98px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Adjust styles for medium screens */
+}
+
+/* Styles for screens between 992px and 1199.98px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Adjust styles for large screens */
+}
+
+/* Styles for screens 1200px and above */
+@media (min-width: 1200px) {
+  /* Adjust styles for extra large screens */
+}
+
+/* Media Queries */
+@media (max-width: 767.98px) {
+  .overlay-container {
+    width: 57%;
+    padding: 4vw;
   }
 
-   /* Slide show Image handler */
-   .slideshow-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .slideshow-image.loaded {
-    opacity: 1 !important;
-  }
-  
-  
-  .slideshow-image.hidden {
-    display: none;
-  }
- 
-
-  /* Main Page Content //////////////////////////////////////////////////////////////////////////////*/
-  .container {
-    width: 80vw;
-    padding: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  
-  .content {
-    margin: 0 auto;
-    padding: 4vw 2vw; /* Adjust the vw values as needed */
-    text-align: center;
-    margin-right: 10vw;
-    margin-left: 10vw;
-  }
-  
-  h1 {
-    color: #a91d1d;
-    font-size: 5vw; /* Adjust the vw value as needed */
-    margin-top: 2vh;
-    margin-bottom: 2vw; /* Adjust the vw value as needed */
-    text-align: Left;
-  }
-  
-  .text-wrapper {
-    margin: 0 auto;
-  }
-  
-  .text-wrapper p {
-    color: #666;
-    font-size: 3vw; /* Adjust the vw value as needed */
-    line-height: 1.3;
-    margin-top: 0;
-    margin-bottom: 1vw; /* Adjust the vw value as needed */
-    text-align: justify ;
-  }
-
-  /* .text-wrapper p::first-letter {
-    color: #a91d1d;
-    font-size: 8vw; 
-    float: left;
-    margin-right: 1vw; 
-    line-height: 1;
-  } */
-
-  /* nietzsche_box */
-  .square-image-container {
-    width: 20vw;
-    height: 20vh;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-bottom: 0vw;
-    margin-top: 1vh;
-  }
-  
-  .square-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-  }
-
-  /* About Me Page /////////////////////////////////////////////////////////////////////////////*/
-  
-  /* Research Page ///////////////////////////////////////////////////////////////////////////// */
-  .research-image-container {
-    width: 100%;
-    height: 45vw; /* Adjust the vw value as needed */
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .research-image-container img {
-    position: absolute;
-    top: -15%;
-    left: 0;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  /* APA Citation Styling */
-  .apa-citation {
-    text-align: left;
-    margin-bottom: 2vw; /* Adjust the vw value as needed */
-  }
-  
-  .apa-citation p {
-    margin: 0;
-    text-indent: -4vw; /* Adjust the vw value as needed */
-    margin-left: 4vw;
-    margin-bottom: 5vh;
-    font-size: 3vw; /* Adjust the vw value as needed */
-    line-height: 1.5;
-  }
-  
-  .research-content h2 {
-    font-size: 3vw; /* Adjust the vw value as needed */
-    color: #a91d1d;
-    margin-top: 4vw; /* Adjust the vw value as needed */
-    margin-bottom: 2vw; /* Adjust the vw value as needed */
-    text-align: left;
-    border-bottom: 2px solid #a91d1d; /* Add a bottom border */
-    padding-bottom: 0.5vw; /* Adjust the vw value as needed */
-  }
-
-  .text-container-research {
-    position: relative;
-    color: #faf3ea;
-    padding: 0;
-  }
-
-  .typing-container {
-    display: inline-block;
-    position: relative;
-    font-family: 'nanum-gothic';
-  }
-  
-  .typing-text {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0;
-    font-family: 'nanum-gothic', monospace;
-    line-height: 1;
-  }
-  
   .typing-text.heading {
-    font-size: 10vw;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-  }
-  
-  .typing-text.heading::after {
-    content: "_";
-    display: inline-block;
-    vertical-align: bottom;
-    animation: blink 0.7s infinite;
-    color: #a91d1d;
-    font-size: 1em;
-    line-height: 1.11em;
-  }
-  
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
+    font-size: 12vw;
   }
 
-  .text-measure {
-    opacity: 0; 
-    white-space: nowrap; 
-    font-family: 'nanum-gothic', serif; 
-    font-size: 5vw; 
+  .research-content h2 {
+    font-size: 5vw;
   }
 
-  /* Font Library /////////////////////////////////////////////////////////////////////////*/
-  
-  .goudy-bookletter-1911-regular {
-    font-family: 'Goudy Bookletter 1911', serif;
-    font-weight: 400;
-    font-style: normal;
+  .apa-citation p {
+    font-size: 3vw;
   }
-  
-  .im-fell-regular {
-    font-family: 'IM Fell Great Primer', serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .im-fell-italic {
-    font-family: 'IM Fell Great Primer', serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  .forum-regular {
-    font-family: "Forum", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  /* .nanum-gothic coding-regular {
-    font-family: "Nanum Gothic Coding", monospace;
-    font-weight: 400;
-    font-style: normal;
-  } */
+}
 
-  .nanum-gothic coding-regular {
-    font-family: "Nanum Gothic Coding", monospace;
-    font-weight: 400;
-    font-style: normal;
-  }
- 
+@media (min-width: 768px) {
+  .overlay-container {
+    width: 50%;
+    padding: 2
+  }}
