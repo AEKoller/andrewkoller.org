@@ -55,10 +55,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #000000;
+  color: #000000 !important;
   text-decoration: none;
   font-size: 2.5vw; /* Adjust the vw value as needed */
   position: relative;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
 }
 
 nav ul li a::after {
@@ -257,6 +261,26 @@ h1 {
 /* About Me Page /////////////////////////////////////////////////////////////////////////////*/
 
 /* Research Page ///////////////////////////////////////////////////////////////////////////// */
+
+.overlay-container-research {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  width: 55%; /* Adjust the width as needed */
+  height: auto;
+  padding: 2vw; /* Adjust the vw value as needed */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.overlay-container-research.visible {
+  opacity: 1;
+}
+
 .research-image-container {
   width: 100%;
   height: 45vw; /* Adjust the vw value as needed */
@@ -352,6 +376,32 @@ h1 {
   font-family: 'nanum-gothic', serif; 
   font-size: 5vw; 
 }
+/* APA Citation Styling */
+.apa-citation {
+  text-align: left;
+  margin-bottom: 2vw; /* Adjust the vw value as needed */
+}
+
+.apa-citation p {
+  margin: 0;
+  text-indent: -4vw; /* Adjust the vw value as needed */
+  margin-left: 4vw;
+  margin-bottom: 2vh;
+  font-size: 2vw; /* Adjust the vw value as needed */
+  line-height: 1.5;
+}
+
+.research-content h2 {
+  font-size: 3vw; /* Adjust the vw value as needed */
+  color: #a91d1d;
+  margin-top: 4vw; /* Adjust the vw value as needed */
+  margin-bottom: 2vw; /* Adjust the vw value as needed */
+  text-align: left;
+  border-bottom: 2px solid #a91d1d; /* Add a bottom border */
+  padding-bottom: 0.5vw; /* Adjust the vw value as needed */
+}
+
+
 
 /* Font Library /////////////////////////////////////////////////////////////////////////*/
 
@@ -420,8 +470,13 @@ h1 {
 /* Media Queries */
 @media (max-width: 767.98px) {
   .overlay-container {
-    width: 57%;
-    padding: 4vw;
+    width: 55%;
+    padding: 2vw;
+  }
+
+  .overlay-container-research {
+    width: 65%; /* Adjust the width for smaller screens */
+    padding: 2vw;
   }
 
   .typing-text.heading {
@@ -439,6 +494,12 @@ h1 {
 
 @media (min-width: 768px) {
   .overlay-container {
-    width: 50%;
-    padding: 2
-  }}
+    width: 55%;
+    padding: 2vw;
+  }
+
+  .overlay-container-research {
+    width: 55%; /* Adjust the width for larger screens */
+    padding: 2vw;
+  }
+}
