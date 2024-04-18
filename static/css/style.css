@@ -515,3 +515,66 @@ h1 {
     line-height: 1.1; /* adjust line height for better spacing */
   }
 }
+
+/* Skin Cancer Identification Project */
+/* General Elements */
+/* Project Page */
+body.project-body {
+  background-color: #fdd4c3;
+  color: #ffffff;
+}
+
+project-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif;
+  background-color: #97c7f4;
+  color: #97c7f4;
+}
+
+.project-container {
+  width: 80vw;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.project-content {
+  margin: 0 auto;
+  padding: 4vw 2vw;
+  text-align: center;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+.project-title {
+  color: #ffffff;
+  font-size: 5vw;
+  margin-top: 2vh;
+  margin-bottom: 2vw;
+  text-align: left;
+}
+
+.project-title-typing {
+  color: #000000;
+  font-size: 2vw !important;
+  margin-top: 2vh;
+  margin-bottom: 2vw;
+  text-align: left;
+  font-family: 'nanum-gothic', monospace;
+  line-height: 1;
+}
+
+.content-box {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 0px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdd4c3;
+}
+
+@media (min-width: 768px) {
+  .content-box {
+      height: auto; /* Adjust height or set to 'auto' for varying content */
+  }
+}
