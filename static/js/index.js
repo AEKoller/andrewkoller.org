@@ -69,13 +69,41 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   
-    function showNextImage() {
-      slideShowImages[currentImageIndex].classList.remove('loaded');
-      currentImageIndex = (currentImageIndex + 1) % slideShowImages.length;
-      slideShowImages[currentImageIndex].classList.add('loaded');
+  function showNextImage() {
+    slideShowImages[currentImageIndex].classList.remove('loaded');
+    currentImageIndex = (currentImageIndex + 1) % slideShowImages.length;
+
+    const nextImage = slideShowImages[currentImageIndex];
+    if (nextImage.dataset.loaded !== 'true') {
+      // If the next image is not loaded yet, load it
+      const img = new Image();
+      img.src = nextImage.src;
+      img.onload = function() {
+        nextImage.dataset.loaded = 'true';
+        nextImage.classList.add('loaded');
+      };
+    } else {
+      nextImage.classList.add('loaded');
     }
+
+    // Preload the next few images
+    const preloadCount = 2;
+    for (let i = 1; i <= preloadCount; i++) {
+      const preloadIndex = (currentImageIndex + i) % slideShowImages.length;
+      const preloadImage = slideShowImages[preloadIndex];
+      if (preloadImage.dataset.loaded !== 'true') {
+        const img = new Image();
+        img.src = preloadImage.src;
+        img.onload = function() {
+          preloadImage.dataset.loaded = 'true';
+        };
+      }
+    }
+  }
+
+
   
     function startSlideshow() {
-      setInterval(showNextImage, 5000); // Change image every 5 seconds
+      setInterval(showNextImage, 4000); // Change image every 5 seconds
     }
   });

@@ -197,7 +197,7 @@ transition: opacity 1s ease-in-out;
 
 /* Main Page Content //////////////////////////////////////////////////////////////////////////////*/
 .container {
-  width: 80vw;
+  width: 70vw;
   padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
@@ -209,7 +209,7 @@ transition: opacity 1s ease-in-out;
   text-align: center;
   /* margin-right: 10vw;
   margin-left: 10vw; */
-  max-width: 2400px;
+  max-width: 70vw;
 }
 
 h1 {
@@ -226,10 +226,11 @@ h1 {
 
 .text-wrapper p {
   color: #666;
-  font-size: 3vw; /* Adjust the vw value as needed */
+  font-size: 2vw; /* Adjust the vw value as needed */
   line-height: 1.3;
   margin-top: 0;
   margin-bottom: 1vw; /* Adjust the vw value as needed */
+  
   text-align: justify ;
 }
 
@@ -469,7 +470,7 @@ h1 {
   }
 
   .overlay-container-research {
-    width: 65%; 
+    width: 55%; 
     padding: 2vw;
   }
   
@@ -490,7 +491,7 @@ h1 {
   }
 
   .overlay-container-research {
-    width: 65%; /* Adjust the width for smaller screens */
+    width: 55%; /* Adjust the width for smaller screens */
     padding: 2vw;
   }
 
@@ -503,7 +504,7 @@ h1 {
 /* Styles for screens between 992px and 1199.98px */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .overlay-container-research {
-    width: 65%; 
+    width: 55%; 
     padding: 2vw;
   }
   .typing-text.heading {
@@ -516,7 +517,7 @@ h1 {
 @media (min-width: 1200px) {
   /* Adjust styles for extra large screens */
   .overlay-container-research {
-    width: 65%; 
+    width: 55%; 
     padding: 2vw;
   }
   .typing-text.heading {
@@ -531,7 +532,7 @@ h1 {
     line-height: 1.1; /* adjust line height for better spacing */
   }
   .overlay-container-research {
-    width: 65%; 
+    width: 55%; 
     padding: 2vw;
   }
 }
