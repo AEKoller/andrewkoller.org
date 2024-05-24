@@ -479,13 +479,6 @@ h1 {
     line-height: 1.1; 
   }
 
-  .research-content h2 {
-    font-size: 5vw;
-  }
-
-  .apa-citation p {
-    font-size: 3vw;
-  }
 }
 
 /* Styles for screens between 768px and 991.98px */
