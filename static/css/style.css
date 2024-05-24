@@ -449,7 +449,15 @@ h1 {
 
 /* Styles for screens smaller than 576px */
 @media (max-width: 575.98px) {
-  /* Adjust styles for extra small screens */
+
+  .overlay-container-research {
+    width: 65%; 
+    padding: 2vw;
+  }
+  .typing-text.heading {
+    font-size: 9.5vw; 
+    line-height: 1.1; 
+  }
 }
 
 /* Styles for screens between 576px and 767.98px */
@@ -461,12 +469,14 @@ h1 {
   }
 
   .overlay-container-research {
-    width: 65%; /* Adjust the width for smaller screens */
+    width: 65%; 
     padding: 2vw;
   }
+  
 
   .typing-text.heading {
-    font-size: 10vw;
+    font-size: 9.5vw; 
+    line-height: 1.1; 
   }
 
   .research-content h2 {
@@ -487,28 +497,48 @@ h1 {
   }
 
   .overlay-container-research {
-    width: 55%; /* Adjust the width for larger screens */
+    width: 65%; /* Adjust the width for smaller screens */
     padding: 2vw;
   }
 
   .typing-text.heading {
-    font-size: 10vw;
+    font-size: 9.5vw; /* or any fixed size that looks good */
+    line-height: 1.1; /* adjust line height for better spacing */
   }
 }
 
 /* Styles for screens between 992px and 1199.98px */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* Adjust styles for large screens */
+  .overlay-container-research {
+    width: 65%; 
+    padding: 2vw;
+  }
+  .typing-text.heading {
+    font-size: 9.5vw; /* or any fixed size that looks good */
+    line-height: 1.1; /* adjust line height for better spacing */
+  }
 }
 
 /* Styles for screens 1200px and above */
 @media (min-width: 1200px) {
   /* Adjust styles for extra large screens */
+  .overlay-container-research {
+    width: 65%; 
+    padding: 2vw;
+  }
+  .typing-text.heading {
+    font-size: 9.5vw; /* or any fixed size that looks good */
+    line-height: 1.1; /* adjust line height for better spacing */
+  }
 }
 
 @media (min-width: 1440px) {
   .typing-text.heading {
     font-size: 9.5vw; /* or any fixed size that looks good */
     line-height: 1.1; /* adjust line height for better spacing */
+  }
+  .overlay-container-research {
+    width: 65%; 
+    padding: 2vw;
   }
 }
