@@ -108,20 +108,12 @@ nav ul li a:hover::after {
   transition: opacity 1s ease-in-out;
 }
 
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+.slideshow-image.loaded {
+  opacity: 1 !important;
 }
 
-.image-container img.loaded {
-  opacity: 1 !important;
+.slideshow-image.hidden {
+  display: none;
 }
 
 /* Main Page Overlay */
@@ -231,6 +223,7 @@ h1 {
   object-position: center;
 }
 
+/* About Me Page */
 /* Research Page */
 .overlay-container-research {
   position: absolute;
@@ -267,73 +260,55 @@ h1 {
   object-fit: cover;
 }
 
-/* Experience Section */
+/* Lab styling */
 .experience-section {
   width: 100%;
   margin: 20px 0;
-  padding: 20px;
+  padding: 10px; /* Reduced padding */
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left; /* Left justify text */
 }
-
 .experience {
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced margin */
   border-bottom: 1px solid #e1e1e1;
-  padding-bottom: 20px;
+  padding-bottom: 15px; /* Reduced padding */
 }
-
 .experience:last-child {
   border-bottom: none;
 }
-
 .experience-header {
   display: flex;
   align-items: center;
 }
-
 .experience-header img {
-  width: 75px;
-  height: 75px;
-  margin-right: 20px;
+  width: 50px; /* Smaller image size */
+  height: 50px; /* Smaller image size */
+  margin-right: 15px;
 }
-
 .experience-university {
-  font-size: 1.2em;
+  font-size: 1em; /* Reduced font size */
   font-weight: bold;
   margin-top: 5px;
 }
-
 .experience-position {
   color: #666;
-  font-size: 1.2em; /* Make text bigger */
+  font-size: 1em; /* Reduced font size */
   font-weight: bold;
 }
-
 .experience-date-location {
   color: #666;
   margin-top: 5px;
+  font-size: 0.9em; /* Reduced font size */
 }
-
 .experience-description {
   margin-top: 10px;
-  font-size: 1.1em; /* Make text bigger */
+  font-size: 1em; /* Reduced font size */
 }
-
-.experience-description ul {
-  list-style: disc;
-  padding-left: 1.5em;
-}
-
-.experience-description li {
-  margin-bottom: 0.5em;
-}
-
 .experience-skills {
   margin-top: 10px;
 }
-
 .experience-skills span {
   background-color: #e1e9ee;
   color: #0073b1;
@@ -419,13 +394,192 @@ h1 {
 }
 
 .text-measure {
-  opacity: 0; 
-  white-space: nowrap; 
-  font-family: 'nanum-gothic', serif; 
-  font-size: 5vw; 
+  opacity: 0;
+  white-space: nowrap;
+  font-family: 'nanum-gothic', serif;
+  font-size: 5vw;
 }
 
-/* Font Library */
+/* Media Breakpoints */
+/* Styles for screens smaller than 576px */
+@media (max-width: 575.98px) {
+  .overlay-container-research {
+    width: 65%;
+    padding: 2vw;
+  }
+  .typing-text.heading {
+    font-size: 9.5vw;
+    line-height: 1.1;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-header img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .experience-university, .experience-position, .experience-date-location {
+    font-size: 0.9em; /* Smaller font size for mobile */
+  }
+
+  .experience-description ul {
+    padding-left: 20px; /* Add some padding for better readability */
+  }
+}
+
+/* Styles for screens between 576px and 767.98px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .overlay-container {
+    width: 55%;
+    padding: 2vw;
+  }
+  .overlay-container-research {
+    width: 55%;
+    padding: 2vw;
+  }
+  .typing-text.heading {
+    font-size: 9.5vw;
+    line-height: 1.1;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-header img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .experience-university, .experience-position, .experience-date-location {
+    font-size: 1em; /* Slightly larger font size for small screens */
+  }
+
+  .experience-description ul {
+    padding-left: 25px; /* Add some padding for better readability */
+  }
+}
+
+/* Styles for screens between 768px and 991.98px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .overlay-container {
+    width: 55%;
+    padding: 2vw;
+  }
+  .overlay-container-research {
+    width: 55%;
+    padding: 2vw;
+  }
+  .typing-text.heading {
+    font-size: 9.5vw;
+    line-height: 1.1;
+  }
+
+  .experience-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .experience-header img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+
+  .experience-university, .experience-position, .experience-date-location {
+    font-size: 1.1em; /* Default font size */
+  }
+
+  .experience-description ul {
+    padding-left: 30px; /* Add some padding for better readability */
+  }
+}
+
+/* Styles for screens between 992px and 1199.98px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .overlay-container-research {
+    width: 55%;
+    padding: 2vw;
+  }
+  .typing-text.heading {
+    font-size: 9.5vw;
+    line-height: 1.1;
+  }
+
+  .experience-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .experience-header img {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+  }
+
+  .experience-university, .experience-position, .experience-date-location {
+    font-size: 1.2em; /* Default font size */
+  }
+
+  .experience-description ul {
+    padding-left: 30px; /* Add some padding for better readability */
+  }
+}
+
+/* Styles for screens 1200px and above */
+@media (min-width: 1200px) {
+  .overlay-container-research {
+    width: 55%;
+    padding: 2vw;
+  }
+  .typing-text.heading {
+    font-size: 9.5vw;
+    line-height: 1.1;
+  }
+
+  .experience-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .experience-header img {
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+  }
+
+  .experience-university, .experience-position, .experience-date-location {
+    font-size: 1.2em; /* Default font size */
+  }
+
+  .experience-description ul {
+    padding-left: 35px; /* Add some padding for better readability */
+  }
+}
+
+@media (min-width: 1440px) {
+  .typing-text.heading {
+    font-size: 9.5vw;
+    line-height: 1.1;
+  }
+
+  .overlay-container-research {
+    width: 55%;
+    padding: 2vw;
+  }
+}
+
+
+
+/* Font Library /////////////////////////////////////////////////////////////////////////*/
+
 .goudy-bookletter-1911-regular {
   font-family: 'Goudy Bookletter 1911', serif;
   font-weight: 400;
@@ -443,100 +597,20 @@ h1 {
   font-weight: 400;
   font-style: italic;
 }
-
 .forum-regular {
   font-family: "Forum", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.nanum-gothic-coding-regular {
+/* .nanum-gothic coding-regular {
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
-/* Media Breakpoints */
-
-/* Styles for screens smaller than 576px */
-@media (max-width: 575.98px) {
-  .overlay-container-research {
-    width: 65%; 
-    padding: 2vw;
-  }
-  .typing-text.heading {
-    font-size: 9.5vw; 
-    line-height: 1.1; 
-  }
-}
-
-/* Styles for screens between 576px and 767.98px */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .overlay-container {
-    width: 55%;
-    padding: 2vw;
-  }
-
-  .overlay-container-research {
-    width: 55%; 
-    padding: 2vw;
-  }
-
-  .typing-text.heading {
-    font-size: 9.5vw; 
-    line-height: 1.1; 
-  }
-}
-
-/* Styles for screens between 768px and 991.98px */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .overlay-container {
-    width: 55%;
-    padding: 2vw;
-  }
-
-  .overlay-container-research {
-    width: 55%; 
-    padding: 2vw;
-  }
-
-  .typing-text.heading {
-    font-size: 9.5vw; 
-    line-height: 1.1; 
-  }
-}
-
-/* Styles for screens between 992px and 1199.98px */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .overlay-container-research {
-    width: 55%; 
-    padding: 2vw;
-  }
-  .typing-text.heading {
-    font-size: 9.5vw; 
-    line-height: 1.1; 
-  }
-}
-
-/* Styles for screens 1200px and above */
-@media (min-width: 1200px) {
-  .overlay-container-research {
-    width: 55%; 
-    padding: 2vw;
-  }
-  .typing-text.heading {
-    font-size: 9.5vw; 
-    line-height: 1.1; 
-  }
-}
-
-@media (min-width: 1440px) {
-  .typing-text.heading {
-    font-size: 9.5vw; 
-    line-height: 1.1; 
-  }
-  .overlay-container-research {
-    width: 55%; 
-    padding: 2vw;
-  }
+.nanum-gothic coding-regular {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
