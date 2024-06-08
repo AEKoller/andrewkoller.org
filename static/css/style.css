@@ -424,7 +424,7 @@ h1 {
   }
 
   .experience-university, .experience-position, .experience-date-location {
-    font-size: 0.9em; /* Smaller font size for mobile */
+    font-size: 1em; /* Smaller font size for mobile */
   }
 
   .experience-description ul {
@@ -494,7 +494,7 @@ h1 {
   }
 
   .experience-university, .experience-position, .experience-date-location {
-    font-size: 1.1em; /* Default font size */
+    font-size: 1.2em; /* Default font size */
   }
 
   .experience-description ul {
